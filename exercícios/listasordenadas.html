@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTAS</title>
+    <style>
+        li>ol{
+            height: 0px;
+            overflow: hidden;
+            transition: .5s;
+        }
+        li:hover ol{
+            height: 50px;
+        }
+        li:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2
+            <ol>
+                <li>item 2,1</li>
+                <li>item 2,2</li>
+            </ol>
+        </li>
+        <li>item 3</li>
+    </ul>
+    <hr>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguaem de marcação de HyperTexto</dd>
+        <dt>CSS</dt>
+        <dd>Linguaem para criaçãoo de folhas de estilos</dd>
+    </dl>
+    <hr>
+    <dl>
+        <dt>www</dt>
+        <dt>Internet</dt>
+    </dl>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        form{
+            margin: auto;
+            width: 300px;
+        }
+        fieldset{
+            background-color: rgba(12, 21, 148, 0.336);
+        }
+        legend{
+            color: purple;
+            font-weight: bold;
+            box-shadow: 1px 1px 2px black;
+            display: inline-block;
+            box-sizing: border-box;
+            
+        }
+        label{
+           
+        }
+        #imal{
+            display: block;
+            width: 80%;
+            box-sizing: border-box;
+        }
+        #imal:focus{
+            background-color:rgba(0, 0, 255, 0.5) ;
+
+        }
+        #iusu{
+            display: block;
+            width: 80%;
+            box-sizing: border-box;
+        }
+        #iusu:focus{
+            background-color: rgba(0, 0, 255, 0.295);
+        }
+        #isen{
+               display: block;
+            width: 80%;
+            box-sizing: border-box;
+        }
+        .btn:hover{
+            background-color: rgba(6, 6, 43, 0.623);
+            cursor: pointer;
+            transition: .5s;
+        }
+       
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Login</legend>
+            <p>
+                <label for="iusu">Usuario</label>
+                <input type="text" name="usario" id="iusu">
+        
+            </p>
+            <p>
+                <label for="imal">E-mail</label>
+                <input type="email" name="mail" id="imal" required>
+            </p>
+            <p>
+                <label for="isen">Senha</label>
+                <input type="password" name="passowrd" id="isen" required minlength="4" maxlength="8">
+            </p>
+            <input type="submit" value="Enviar" class="btn">
+            <input type="reset" value="Limpar" class="btn">
+        </fieldset>
+    </form>
+    
+    
+</body>
+</html>
