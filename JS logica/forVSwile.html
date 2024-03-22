@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero random</title>
+</head>
+<body>
+    <script>
+        let dado1 = parseInt(Math.random() * 6 +1)
+        let dado2 = parseInt(Math.random() * 6 +1)
+
+        let contador = 1 
+
+        while(dado1 !== dado2){
+
+            console.log(dado1, dado2);
+            contador++
+            dado1 = parseInt(Math.random() * 6 +1)
+            dado2 = parseInt(Math.random() * 6 +1)
+
+        }
+
+        console.log('os dados jogado foram jogados ' + contador + ' vezes. e o numero repetido foi ' + dado1)
+
+        console.log('-----------------------------------------')
+
+            dado1 = parseInt(Math.random() * 6 +1)
+            dado2 = parseInt(Math.random() * 6 +1)
+            contador = 1 
+            do{
+                console.log(dado1, dado2);
+            contador++
+            dado1 = parseInt(Math.random() * 6 +1)
+            dado2 = parseInt(Math.random() * 6 +1)
+            } while{dado1 !== dado2}
+
+            console.log('os dados jogado foram jogados ' + contador + ' vezes. e o numero repetido foi ' + dado1)
+
+    </script>
+    
+</body>
+</html>
