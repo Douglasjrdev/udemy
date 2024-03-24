@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let n = parseFloat(prompt('Digite um numero'));
+
+        for(let contador = 1; contador <= 100; contador++){
+            document.write(n + ' x ' + contador + ': ' + n * contador + '<br>' )
+            if(contador % 10 === 0){
+                document.write('--------------------------------------------<br>')
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
