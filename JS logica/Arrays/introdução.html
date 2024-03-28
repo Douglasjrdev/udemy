@@ -11,10 +11,16 @@
 
         let nomes = ['Douglas', 'Raissa', 'Deus']
 
+        let nome = prompt('digite o seu nome')
+
+        nomes[nomes.length] = nome
+
         for(let i = 0; i < nomes.length; i++){
             document.write(nomes[i] + '<br>')
             console.log(nomes[i])
         }
+
+        document.write('a lista de nome possui ' + nomes.length +  ' elementos')
     </script>
     
 </body>
