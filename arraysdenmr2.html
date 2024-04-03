@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeros = [2 , 5,'a', 4,78,9,false ,8 ,[],null ,6]
+        let soma = 0
+        for(let i = 0; i < numeros.length; i++){
+            let n = numeros[i]
+
+            if(typeof n === 'number'){
+                soma += n
+            }
+           
+        }
+        alert('a soma total é ' + soma)
+    </script>
+</body>
+</html>
