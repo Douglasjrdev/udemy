@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        const clientes  = [
+            {Nome:'Douglas', Idade:'21', Telefone:'71986601266', Email:'douglas@test.com'},
+            {Nome:'Raissa', Idade:'21', Telefone:'71986601266', Email:'douglas@test.com'},
+            {Nome:'Vladmir', Idade:'21', Telefone:'71986601266', Email:'douglas@test.com'}
+        ]
+
+        for(let i = 0; i < clientes.length; i++){
+            let lista = document.getElementById('lista')
+            lista.innerHTML += "<li>" + "Nome: " + clientes[i].Nome + "Idade " + clientes[i].Idade + "Telefone " + clientes[i].Telefone + "</li>"
+        }
+    </script>
+</body>
+</html>
