@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações alunos</title>
+</head>
+<body>
+    <h1>Informações do aluno</h1>
+    <div id="output">
+        
+
+    </div>
+
+
+    <script>
+        const aluno ={
+            nome:'Douglas', 
+            notas:[1,3,3,8]
+        }
+        const output = document.getElementById('output');
+        output.innerHTML = '<ul>'
+
+        output.innerHTML += '<h2>' + aluno.nome + '</h2>'
+        output.innerHTML += '<p>Notas: </p>'
+        
+       let soma = 0
+
+        for(let i = 0; i < aluno.notas.length; i++){
+            soma += aluno.notas[i]
+            output.innerHTML += '<li>' + aluno.notas[i] + '</li>'
+           
+        }
+        let media = soma / 4
+
+        output.innerHTML +='</ul>'
+        output.innerHTML += '<p>' +'Media: '+ media + ' </p>'
+       
+        let aprovado = null
+       
+        if(media >= 7){
+            aprovado = 'Sim'
+
+        }else{
+            aprovado = 'Não'
+        }
+        output.innerHTML += '<p> Aprovado? ' + aprovado + ' </p>'
+
+
+    </script>
+    
+</body>
+</html>
