@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" name="" id="number">
+    <button onclick="chamar()">Mostrar</button>
+    <button onclick="Limpar()">Limpar</button>
+    <div id="output">
+
+    </div>
+
+    <script>
+        const input = document.getElementById('number')
+        const output = document.getElementById('output')
+       
+        
+
+            let tabela = ''
+
+      
+
+        function chamar(){
+            let contador = 0
+      
+
+            let inputValue = input.value
+            Limpar()
+
+            while (contador <= 11) {
+            tabela =  output.innerHTML += inputValue + ' x ' + contador + ' = ' + contador * inputValue + '<br>'
+                
+                contador++
+                
+          
+        }
+             
+        }
+        function Limpar(){
+            tabela = ''
+           output.innerHTML = ''
+           
+            
+        }
+     
+    </script>
+    
+</body>
+</html>
