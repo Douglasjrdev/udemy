@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base </title>
+</head>
+<body>
+
+    <label>Base
+        <input type="number" name="" id="base" value="">
+    </label>
+
+
+    <label>Altura
+        <input type="number" name="" id="altura" value="">
+    </label>
+   
+    <button onclick="calcular()">Mostrar</button>
+    <br> 
+    <output id="output">
+        
+    </output>
+
+    
+    <script>
+        const altura = document.getElementById('altura')
+        const base = document.getElementById('base')
+        const output = document.getElementById('output')
+        const nome = document.getElementById('nome')
+        
+        
+       
+
+      
+
+        function calcular(){
+            let alturaValue = altura.value
+            let basevalue = base.value
+            let soma = basevalue * alturaValue / 2
+            output.innerHTML = `O valor de Base:${basevalue} X a altura:${alturaValue} é  ${soma}`
+            console.log(basevalue)
+           
+
+        }
+      
+    </script>
+    
+</body>
+</html>
