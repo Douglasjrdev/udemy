@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="mostrarinpt()">Calcular area do input</button>
+    <button onclick="mostrarprom()">Calcular prompt</button>
+    
+
+    <div id="output"></div>
+
+
+    <script>
+        const input = document.getElementById('input')
+        const output = document.getElementById('output')
+
+        function mostrarprom(){
+            let raioValue = parseFloat(prompt('Digite o numero do raio'))
+           mostrararea(raioValue)
+        }
+
+        function mostrarinpt(){
+            let raioValue = parseFloat(input.value)
+            mostrararea(raioValue)
+        }
+      
+
+        function mostrararea(raio){
+        const pi = Math.PI
+
+        let area = pi * raio * raio
+        output.innerHTML = ` a area de ${raio} é ${area}`
+        }
+       
+          
+    </script>
+</body>
+</html>
