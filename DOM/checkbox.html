@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="txtnome">
+        <input type="email" name="" id="txtemail"><br><br>
+
+
+        <input type="checkbox" name="" id="contrato"  onclick="enables()">
+        <label for="contrato"> Li e aceito o contrato</label><br>
+        <textarea name="" id="" cols="15" rows="6">OS TERMOS BLA BLA BLABLA</textarea >
+        <input type="submit" value="Cadastrar"  id="cadastro" disabled>
+        
+    </form>
+
+    <script>
+
+      
+ function enables(){
+        const chkbox = document.querySelector('#contrato')
+        const cadastro = document.querySelector('#cadastro')
+        let boxcheck = chkbox.checked
+    // if (boxcheck) {
+    //         cadastro.disabled = false
+            
+    //     }else{
+    //         cadastro.disabled = true
+    //     }
+       
+        //posso usar tbm forma simplificada 
+        cadastro.disabled = !boxcheck
+        console.log(boxcheck)
+ }
+      
+    </script>
+   
+</body>
+</html>
