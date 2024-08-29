@@ -15,4 +15,13 @@ title.setAttributeNode(atributo) // ele vai adicionar o atributo no tittle no ca
 
  document.querySelector('.container').insertBefore(title2, document.querySelector('ul'))
 
+ const container = document.querySelector('.container')
+
+ const span = document.createElement('span')
+ span.textContent = 'span dinamica'
+
+ const seungoParagrafo = container.firstChild.nextElementSibling.nextElementSibling
+ seungoParagrafo.after('texto inserido por after')
+ seungoParagrafo.before(span)
+ console.log(seungoParagrafo)
 console.log(title)
