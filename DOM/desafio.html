@@ -70,12 +70,21 @@
     </div>
 
     <script type="text/javascript">
+
+        const ulalvo = document.querySelector('.alvo ul')
+        const ulaoriginal = document.querySelector('.original ul')
 		// crie um nova li com texto "item 2" e a inclua na ul de div com class .alvo
+        const li4 = document.createElement('li')
+        li4.textContent = 'item2'
+        ulalvo.appendChild(li4)
 
 		//Mova a última li de orignal para alvo (mas antes da primeira li). 
         //Em outras palavras, a última li da original deve virar a primeira li de alvo
+        //parent.insertBefore(Element, referencia)
+        ulalvo.insertBefore(ulaoriginal.lastElementChild, ulalvo.firstElementChild)
 
 		//altere o texto da primeira li de .alvo para "item 0"
+        ulalvo.children[0].textContent = 'item 0'
 
 		//clone a ul de .original e a inclua na primeira li de .alvo
 
