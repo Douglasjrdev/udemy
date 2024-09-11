@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>delegação</h1>
+    <div class="container">
+      <button>botão 1</button>
+      <button>botão 2</button>
+      <button>botão 3</button>
+    </div>
+    
+    <script>
+
+        document.addEventListener('click', function(){
+                console.log('click no documento')
+            })
+           const container = document.querySelector('.container')
+           const btns = document.querySelectorAll('.container button')
+    //        console.log(btns);
+    //       [...btns].forEach(btn => {
+    //        btn.addEventListener('click', function(e) {                         //erro de perfomace muito listner
+    //       e.stopPropagation()
+    //      console.log(e.target)
+    //     })
+    // })
+
+            container.addEventListener('click', function(e){
+                e.stopPropagation()
+                if(e.target.nodeName === 'BUTTON'){
+                    console.log(e.target)
+                }
+            })
+    </script>
+</body>
+</html>

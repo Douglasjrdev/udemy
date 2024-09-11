@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+    
 </head>
 <body>
+    <button id="btn1">BTN</button>
+
+
+    <script>
+        let btn = document.getElementById('btn1')
+
+        btn.addEventListener('click', function clicar (e){
+          e.stopPropagation() // para parar a propagação
+            console.log(e)
+          
+        },
     
+    
+        false)
+            document.addEventListener('click', function(){
+                console.log('click no documento')
+            })
+    </script>
 </body>
 </html>
