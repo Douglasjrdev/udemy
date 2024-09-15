@@ -31,4 +31,11 @@
      }
      btn.disabled = true
      const chkAceito = document.getElementById('chkAceito')
+      if(chkAceito != btn.disabled){
+        btn.disabled = false
+        
+      }
+
+      console.log(chkAceito.typeof)
+      console.log(btn.typeof)
 })()
