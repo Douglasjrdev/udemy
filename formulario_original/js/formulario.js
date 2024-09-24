@@ -7,11 +7,22 @@
     const btn = document.getElementById('btn')
     formcadastro.addEventListener('submit', function(e){
         if(!txtitulo.value){
-            alert('preencha todos os campos')
+            showMessange('preencha todos os campos')
             e.preventDefault()
             txtitulo.focus()
         }
     })
+    const feedbackMessage = document.getElementById('feedbackMessage')
+    const feedbackMessageclosebtn = feedbackMessage.getElementsByTagName('button')[0]
+    feedbackMessageclosebtn.addEventListener('click',function(){
+        feedbackMessage.classList.remove('show')
+        txtitulo.focus()
+    })
+    function showMessange(msg){
+        //alert(msg)
+        feedbackMessage.classList.add('show')
+        feedbackMessage.getElementsByTagName('p')[0].textContent = msg
+    }
 
     const txtDescricao = document.querySelector('#txtDescricao')
     const contadorcontainer = document.querySelector('#contador')
@@ -31,11 +42,10 @@
      }
      btn.disabled = true
      const chkAceito = document.getElementById('chkAceito')
-      if(chkAceito != btn.disabled){
-        btn.disabled = false
+      chkAceito.addEventListener("change", function(){
+        btn.disabled = !this.checked
+      })
         
       }
 
-      console.log(chkAceito.typeof)
-      console.log(btn.typeof)
-})()
+)()
