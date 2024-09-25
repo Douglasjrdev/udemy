@@ -13,11 +13,15 @@
         }
     })
     const feedbackMessage = document.getElementById('feedbackMessage')
-    const feedbackMessageclosebtn = feedbackMessage.getElementsByTagName('button')[0]
+    const feedbackMessageclosebtn = feedbackMessage.getElementsByTagName('button')[0];
+    feedbackMessageclosebtn.focus()
+
     feedbackMessageclosebtn.addEventListener('click',function(){
         feedbackMessage.classList.remove('show')
         txtitulo.focus()
     })
+   
+
     function showMessange(msg){
         //alert(msg)
         feedbackMessage.classList.add('show')
