@@ -28,7 +28,7 @@
         li.className = 'todo-item'
         const p = document.createElement('p')
         p.className = 'task-name'
-        p.textContent = obj.name
+        p.textContent = obj.nome
         li.appendChild(p)
         addEventLi(li)
          return li;
