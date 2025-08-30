@@ -58,3 +58,61 @@ const parOuImpar = (n) =>{
 
 parOuImpar(5)
 parOuImpar(10)
+
+
+// for of
+
+
+const somaIfinita = (...args) => { //igual loop for mas numa estrutura mais simples
+    let total = 0;
+
+    for (const num of args) {
+        total+= num
+    }
+    return total;
+
+}
+
+console.log(somaIfinita(1,2,3,5,6))
+console.log(somaIfinita(6,6))
+
+
+
+//destructuring em objetos
+
+const usurario = {
+    Nome:'Douglas',
+    Sobre:'Alves',
+    Proficao:'Assistente adm'
+}
+
+const {Nome, Sobre, Proficao} = usurario
+
+
+// renomar variavel
+
+const {Nome: Name} = usurario
+
+
+//destructuring em arrays
+
+
+const lista = ['Carro', 'moto','bike']
+
+
+const [A, B, C] = lista
+
+console.log(A,B,C)
+
+//JSON
+
+const meuJson = '{"name": "Douglas", "idade": 22, "Skils": ["CSS", "JS", "HTML"]}'
+
+console.log(meuJson)
+
+//converterndo pra JSON
+
+
+const meuObj =JSON.parse(meuJson)
+
+console.log(meuObj)
