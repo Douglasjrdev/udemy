@@ -163,54 +163,58 @@
 //outro modo de fazer função constutora
 
 
-function cachorro (raca, nome){
+// function cachorro (raca, nome){
 
-    this.raca = raca
-    this.nome = nome
+//     this.raca = raca
+//     this.nome = nome
 
-}
+// }
 
-const husky = new cachorro('husky' , 'spike')
+// const husky = new cachorro('husky' , 'spike')
 
-console.log(husky)
+// console.log(husky)
 
-cachorro.prototype.uivar = function () {
-    console.log('auUuUUuUu')
-}
+// cachorro.prototype.uivar = function () {
+//     console.log('auUuUUuUu')
+// }
 
-husky.uivar()
+// husky.uivar()
 
-//Classe em JS
-
-
-class CachorroClasse {
-    constructor(nome, raca){
-
-        this.nome = nome
-        this.raca = raca
-    }
-}
-
-const jeff = new CachorroClasse("jeff" , "fila")
-
-console.log(jeff)
+// //Classe em JS
 
 
-//mais sobre as classes
+// class CachorroClasse {
+//     constructor(nome, raca){
+
+//         this.nome = nome
+//         this.raca = raca
+//     }
+// }
+
+// const jeff = new CachorroClasse("jeff" , "fila")
+
+// console.log(jeff)
 
 
-class caminhao {
-    constructor(eixos, cor) {
-        this.eixos = eixos
-        this.cor = cor
+// //mais sobre as classes
+
+
+// class caminhao {
+//     constructor(eixos, cor) {
+//         this.eixos = eixos
+//         this.cor = cor
         
-    }
-    descreverCaminhao() {
-        console.log(`Esse caminho tem ${this.eixos} eixos e a cor dele é ${this.cor}`)
-    } 
-}
+//     }
+//     descreverCaminhao() {
+//         console.log(`Esse caminho tem ${this.eixos} eixos e a cor dele é ${this.cor}`)
+//     } 
+// }
 
-const volvo = new caminhao(6, "preto")
+// const volvo = new caminhao(6, "preto")
 
-console.log(volvo)
-volvo.descreverCaminhao()
+// console.log(volvo)
+// volvo.descreverCaminhao()
+
+
+
+//DEPURANDO COM JS
