@@ -55,3 +55,14 @@ Promise.resolve(4*'asas')
     }
 })
 .catch((err) => console.log('um erro ocorreu ' + err))
+
+// Async Fuction
+
+async function SomarComDelay(a, b) {
+
+    return a+b;
+    
+}
+SomarComDelay(2, 4).then((value) =>{
+    console.log(`o valor da soma é ${value}`)
+});
