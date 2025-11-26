@@ -1,25 +1,26 @@
 const buttons = document.querySelectorAll("#image-picker li");
-const image = document.querySelector("#product-image");
+const image =document.querySelector("#product-image");
 
-buttons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+buttons.forEach((btn) => { //foreach dos butões
+  btn.addEventListener("click", (e) => { //adicionei um evento de click no botão
     console.log(e);
 
-    buttons.forEach((btn) =>
+    buttons.forEach((btn) =>{ //fiz outro for each pra remover as classe selected
       btn.querySelector(".color").classList.remove("selected")
-    );
+    })
+    //dps que removi agora adiciono onde clickar
+     const button = e.target
 
-    const button = e.target;
+     const id = button.getAttribute("id") //peguei o atributo do id
 
-    const id = button.getAttribute("id");
+     button.querySelector(".color").classList.add("selected")//adicionei a classe selectd no item clickado
 
-    button.querySelector(".color").classList.add("selected");
+     image.classList.add("changing")//adicionei a calsse changig que deixa image clara
+     image.setAttribute("src", `img/iphone_${id}.jpg`)// vou trocar o src quando clickar na img pelo id
 
-    image.classList.toggle("changing");
-    image.setAttribute("src", `img/iphone_${id}.jpg`);
+     setTimeout(() => {
+      image.classList.toggle("changing")// toggle para voltar a classe se já tiver a classe ela romeve o timeoutt é pra fazer a verificação dps de 200ms
+     },200);
+  })
+})
 
-    setTimeout(() => {
-      image.classList.toggle("changing");
-    }, 200);
-  });
-});
